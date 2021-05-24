@@ -1,0 +1,10 @@
+.song {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.album-img {
+    height: 100px;
+    width: 100px;
+}

@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import Login, { getTokenFromUrl } from "./pages/Login";
+import Home from "./pages/Home";
+import { useDataLayerValue } from "./DataLayer";
+import Pages from "./pages";
+
 
 function App() {
+  
+  const [{ token }, dispatch] = useDataLayerValue();
+
+  useEffect(() => {
+    const readToken = getTokenFromUrl();
+    window.location.hash = "";
+    if (readToken) {
+      dispatch({
+        type: "SET_TOKEN",
+        token: readToken
+      });
+    }
+  }, []);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {token ? <Home token={token}/> : <Login />}
     </div>
   );
 }
