@@ -1,13 +1,12 @@
 import React, {useEffect} from "react";
-import Artist from "../Artist";
-import Songs from "../Songs";
 import "./Home.css";
 import { useDataLayerValue } from "../DataLayer";
+import Navigation from "./Navigation";
 
 
-function Home({token}) {
+function Home() {
     
-    const [{ artists, songs }, dispatch] = useDataLayerValue();
+    const [{ token, artists, songs }, dispatch] = useDataLayerValue();
 
     const getTopArtists = async () => {
         const type = "artists";
@@ -22,7 +21,6 @@ function Home({token}) {
             })
         });
         const data = await response.json();
-        console.log(data.items);
         dispatch({
             type: "SET_ARTISTS",
             artists: data.items
@@ -42,7 +40,6 @@ function Home({token}) {
             })
         });
         const data = await response.json();
-        console.log(data.items);
         dispatch({
             type: "SET_SONGS",
             songs: data.items
@@ -55,29 +52,8 @@ function Home({token}) {
     }, []);
     
     return (
-        <div className="blocks">
-            <div className="artists">
-                {artists.map(artist => (
-                    <Artist 
-                        name={artist.name}
-                        image={artist.images[0].url}
-                        url={artist.external_urls.spotify}
-                        key={artist.id}
-                    />
-                ))}
-            </div>
-            <div className="songs">
-                {songs.map(song => (
-                        <Songs 
-                            name={song.name}
-                            artists={song.artists.map(artist => artist.name)}
-                            album={song.album.name}
-                            image={song.album.images[0].url}
-                            url={song.external_urls.spotify}
-                            key={song.id}
-                        />
-                ))}
-            </div>
+        <div className="homepage">
+            <Navigation />
         </div>
     );
 }

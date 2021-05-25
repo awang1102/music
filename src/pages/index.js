@@ -1,9 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 import Home from "./Home.js"
@@ -11,6 +9,7 @@ import ArtistsPage from "./ArtistsPage";
 import SongsPage from "./SongsPage";
 
 const Pages = () => {
+
   return(
       <Router>
           <Route exact path="/" component= {Home} />

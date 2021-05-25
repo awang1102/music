@@ -1,0 +1,40 @@
+.nav-bar {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.nav-button {
+    padding: 20px 20px 15px 20px;
+    margin: 25px;
+    border-radius: 50px;
+}
+
+.home-button {
+    background-color: #EC058E;
+}
+
+.artist-button {
+    background-color: #47CFD8;
+}
+
+.song-button {
+    background-color: #D176D6;
+}
+
+.link-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #010400;
+}
+
+.link-text:visited {
+    text-decoration: none;
+    color: #010400;
+}
+
+.link-text:hover {
+    cursor: pointer;
+}

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import Login, { getTokenFromUrl } from "./pages/Login";
-import Home from "./pages/Home";
 import { useDataLayerValue } from "./DataLayer";
 import Pages from "./pages";
 
@@ -12,6 +11,7 @@ function App() {
 
   useEffect(() => {
     const readToken = getTokenFromUrl();
+    console.log("Token: ", readToken);
     window.location.hash = "";
     if (readToken) {
       dispatch({
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      {token ? <Home token={token}/> : <Login />}
+      {token ? <Pages /> : <Login />}
     </div>
   );
 }

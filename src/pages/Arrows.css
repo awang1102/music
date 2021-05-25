@@ -1,0 +1,17 @@
+.up-arrow {
+    top: 5%;
+}
+
+.down-arrow {
+    bottom: 5%;
+}
+
+.arrow {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
