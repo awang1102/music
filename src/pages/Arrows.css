@@ -1,11 +1,3 @@
-.up-arrow {
-    top: 5%;
-}
-
-.down-arrow {
-    bottom: 5%;
-}
-
 .arrow {
     position: fixed;
     left: 50%;
@@ -14,4 +6,16 @@
 
 .arrow:hover {
     cursor: pointer;
+}
+
+#up-arrow {
+    top: 5%;
+}
+
+#down-arrow {
+    bottom: 5%;
+}
+
+.hidden {
+    display: none;
 }

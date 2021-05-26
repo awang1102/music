@@ -1,7 +1,7 @@
 import React from "react";
 import "./Songs.css";
 
-const Songs = ({name, rank, artists, album, image, url}) => {
+const Songs = ({name, rank, artists, image, url}) => {
     rank += 1;
     return(
         <div className="song">
@@ -9,9 +9,8 @@ const Songs = ({name, rank, artists, album, image, url}) => {
                 <img className="album-img" src={image} alt=""/>
             </a>
             <div className="song-info">
-                <div>{rank}. {name}</div>
-                <div>{album}</div>
-                <div>{artists.join(', ')}</div>
+                <div className="song-name">{rank}. {name}</div>
+                <div className="artist-names">{artists.join(', ')}</div>
             </div>
         </div>
     );

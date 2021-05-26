@@ -30,7 +30,7 @@ function Home() {
     const getTopSongs = async () => {
         const type = "tracks";
         const time_range = "short_term";
-        const limit = 10;
+        const limit = 25;
         const response = await fetch(`https://api.spotify.com/v1/me/top/${type}?time_range=${time_range}&limit=${limit}`,
         {
             headers: new Headers({
@@ -54,6 +54,14 @@ function Home() {
     return (
         <div className="homepage">
             <Navigation />
+            <div className="text">
+                <div id="line1">View the</div>
+                <div id="line2">
+                    <span className="voice-text">voices</span> and <span className="tune-text">tunes</span>
+                </div>
+                <div id="line3">that you've had</div>
+                <div id="line4">on repeat</div>
+            </div>
         </div>
     );
 }

@@ -8,7 +8,7 @@ const Artist = ({name, rank, image, url}) => {
             <a href={url}>
                 <img className="artist-img" src={image} alt=""/>
             </a>
-            <div className="name">{rank}. {name}</div>
+            <div className="artist-name">{rank}. {name}</div>
         </div>
     );
 }
