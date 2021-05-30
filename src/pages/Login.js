@@ -4,7 +4,7 @@ import "./Login.css";
 
 const authEndpoint = "https://accounts.spotify.com/authorize";
 const clientId = "e06f58a8015a4397a0635d21cc0bc803";
-const redirectUri = "http://localhost:3000/"; //"https://spotify-unwrapped-2d5d9.web.app/";
+const redirectUri = "https://spotify-unwrapped-2d5d9.web.app/";
 const scopes = [
     "user-read-currently-playing",
     "user-read-recently-played",
