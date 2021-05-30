@@ -18,7 +18,6 @@ const ArtistsPage = () => {
                 image={artist.images[0].url}
                 url={artist.external_urls.spotify}
                 key={artist.id}
-                className="element"
             />
         ));
 

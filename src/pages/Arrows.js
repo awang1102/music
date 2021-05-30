@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import "./Arrows.css"
 import upArrow from '../img/uparrow.svg';
@@ -8,10 +8,6 @@ const Arrows = ({mapping}) => {
 
     let index = 1;
 
-    useEffect(() => {
-        hideUp();
-    }, []);
-
     function scrollUp() {
         hideUp();
         hideDown();
@@ -19,10 +15,10 @@ const Arrows = ({mapping}) => {
         console.log(index);
         scroll.scrollMore(-700);
         setTimeout(() => {
-            if (index != 1) {
+            if (index !== 1) {
                 showUp();
             }
-            if (index != 10) {
+            if (index !== 10) {
                 showDown();
             }
         }, 1000);
@@ -35,10 +31,10 @@ const Arrows = ({mapping}) => {
         console.log(index);
         scroll.scrollMore(700); 
         setTimeout(() => {
-            if (index != 1) {
+            if (index !== 1) {
                 showUp();
             }
-            if (index != 10) {
+            if (index !== 10) {
                 showDown();
             }
         }, 1000);
@@ -62,8 +58,8 @@ const Arrows = ({mapping}) => {
 
     return(
         <div className="elements">
-            <img onClick={scrollUp} id="up-arrow" className="arrow" src={upArrow}/>
-            <img onClick={scrollDown} id="down-arrow" className="arrow" src={downArrow}/>
+            <img onClick={scrollUp} id="up-arrow" alt="up arrow" className="arrow hidden" src={upArrow}/>
+            <img onClick={scrollDown} id="down-arrow" alt="down arrow" className="arrow" src={downArrow}/>
         </div>
     );
 }

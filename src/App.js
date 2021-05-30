@@ -11,7 +11,6 @@ function App() {
 
   useEffect(() => {
     const readToken = getTokenFromUrl();
-    console.log("Token: ", readToken);
     window.location.hash = "";
     if (readToken) {
       dispatch({

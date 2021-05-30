@@ -1,7 +1,6 @@
 .text {
-    position: absolute;
-    top: 100px;
-    left: 100px;
+    width: 90vw;
+    margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 120px;
@@ -19,12 +18,8 @@
 
 #line3 {
     text-align: right;
-    position: relative;
-    right: -200px;
 }
 
 #line4 {
     text-align: right;
-    position: relative;
-    right: -200px;
 }

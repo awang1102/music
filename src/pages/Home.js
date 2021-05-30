@@ -46,10 +46,49 @@ function Home() {
         });
     }
 
+    const getProfile = async () => {
+        const response = await fetch(`https://api.spotify.com/v1/me`,
+        {
+            headers: new Headers({
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`,
+            })
+        });
+        const data = await response.json();
+        dispatch({
+            type: "SET_USER",
+            user: data
+        });
+    }
+
+    const getRecommendations = async () => {
+        const limit = 10;
+        const seedArtists = [artists[0].id, artists[1].id];
+        const seedSongs = [songs[0].id, songs[1].id, songs[2].id];
+        const response = await fetch(`https://api.spotify.com/v1/recommendations?limit=${limit}&seed_artists=${seedArtists.join(",")}&seed_tracks=${seedSongs.join(",")}`,
+        {
+            headers: new Headers({
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`,
+            })
+        });
+        const data = await response.json();
+        console.log(data);
+    }
+
     useEffect(() => {
         getTopArtists();
         getTopSongs();
+        getProfile();
     }, []);
+
+    useEffect(() => {
+        if (artists.length > 0 && songs.length > 0) {
+            getRecommendations();
+        }
+    }, [artists, songs]);
     
     return (
         <div className="homepage">

@@ -1,0 +1,17 @@
+.profile-img {
+    border-radius: 50%;
+}
+
+.user-name {
+    color: #EC058E;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.user-id {
+    color: #EC058E;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}

@@ -7,6 +7,7 @@ import {
 import Home from "./Home.js"
 import ArtistsPage from "./ArtistsPage";
 import SongsPage from "./SongsPage";
+import Profile from "./Profile"
 
 const Pages = () => {
 
@@ -15,6 +16,7 @@ const Pages = () => {
           <Route exact path="/" component= {Home} />
           <Route path = "/artists" component = {ArtistsPage} />
           <Route path = "/songs" component = {SongsPage} />
+          <Route path = "/profile" component = {Profile} />
       </Router>
   );
 };

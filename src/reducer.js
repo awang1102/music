@@ -19,6 +19,10 @@ const reducer = (state, action) => {
             ...state, 
             songs: action.songs
         }
+    case "SET_USER": return {
+        ...state, 
+        user: action.user
+        }
     default:
       return state;
   }
