@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const readToken = getTokenFromUrl();
     window.location.hash = "";
-    if (readToken) {
+    if (token == null) {
       dispatch({
         type: "SET_TOKEN",
         token: readToken

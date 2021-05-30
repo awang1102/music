@@ -75,7 +75,10 @@ function Home() {
             })
         });
         const data = await response.json();
-        console.log(data);
+        dispatch({
+            type: "SET_RECOMMENDED",
+            recommended: data
+        });
     }
 
     useEffect(() => {

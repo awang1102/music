@@ -8,6 +8,8 @@ import Home from "./Home.js"
 import ArtistsPage from "./ArtistsPage";
 import SongsPage from "./SongsPage";
 import Profile from "./Profile"
+import Recommend from "./Recommend"
+
 
 const Pages = () => {
 
@@ -17,6 +19,7 @@ const Pages = () => {
           <Route path = "/artists" component = {ArtistsPage} />
           <Route path = "/songs" component = {SongsPage} />
           <Route path = "/profile" component = {Profile} />
+          <Route path = "/recommendations" component = {Recommend} />
       </Router>
   );
 };

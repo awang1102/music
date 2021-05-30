@@ -3,6 +3,7 @@ export const initialState = {
     token: null,
     artists: [],
     songs: [],
+    recommended: []
 };
 
 const reducer = (state, action) => {
@@ -22,6 +23,10 @@ const reducer = (state, action) => {
     case "SET_USER": return {
         ...state, 
         user: action.user
+        }
+    case "SET_RECOMMENDED": return {
+        ...state, 
+        recommended: action.recommended
         }
     default:
       return state;

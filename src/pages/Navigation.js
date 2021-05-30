@@ -19,7 +19,7 @@ const Navigation = () => {
                 </div>
             </div>
             <Link className="link-text" to="/profile">
-                        <img src={profileButton} alt="profile button" className="profile-button"/>
+                <img src={profileButton} alt="profile button" className="profile-button"/>
             </Link>
         </div>
     );

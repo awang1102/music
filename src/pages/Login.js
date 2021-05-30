@@ -9,10 +9,11 @@ const scopes = [
     "user-read-currently-playing",
     "user-read-recently-played",
     "user-top-read",
+    "playlist-modify-public"
 ];
 
 const loginUrl = `${authEndpoint}?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}
-&scope=${scopes.join("%20")}&show_dialog=true`;
+&scope=${scopes.join("%20")}`;
 
 export const getTokenFromUrl = () => {
     const url = window.location.hash;
