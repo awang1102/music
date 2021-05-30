@@ -77,7 +77,7 @@ function Home() {
         const data = await response.json();
         dispatch({
             type: "SET_RECOMMENDED",
-            recommended: data
+            recommended: data.tracks
         });
     }
 

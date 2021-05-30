@@ -3,7 +3,7 @@ export const initialState = {
     token: null,
     artists: [],
     songs: [],
-    recommended: []
+    recommended: [],
 };
 
 const reducer = (state, action) => {

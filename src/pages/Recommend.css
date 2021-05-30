@@ -1,0 +1,10 @@
+.rec-text, .rec-text:visited, .rec-text:hover, .rec-text:active {
+    background-color: #EC058E;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 25px 15px 25px;
+    border-radius: 50px;
+}

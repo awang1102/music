@@ -27,3 +27,10 @@
     border-radius: 50px;
     background-color: #EC058E;
 }
+
+.link-text {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
